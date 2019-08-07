@@ -28,6 +28,12 @@ function isIsogram(str) {
   }
 }
 
+// ===
+
+function isIsogram(str) {
+  return !/(\w).*\1/i.test(str)
+}
+
 console.log(isIsogram('Dermatoglyphics')) // true
 console.log(isIsogram('aba')) // false
 console.log(isIsogram('moOse')) // false // -- ignore letter case
