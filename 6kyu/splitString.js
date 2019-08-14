@@ -11,7 +11,7 @@ function solution(str) {
     result.push(temp)
     temp = ''
   }
-  result
+  return result
 }
 
 console.log(solution('abc')) // should return ['ab', 'c_']
