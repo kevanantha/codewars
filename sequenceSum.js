@@ -2,33 +2,23 @@
 // The sequence is defined by 3 non-negative values: begin, end, step.
 // If begin value is greater than the end, function should returns 0
 
+/* const sequenceSum = (begin, end, step) => {
+  if (begin > end) return 0
+
+  let total = 0
+
+  for (i = begin; i <= end; i += step) {
+    total += i
+  }
+
+  return total
+} */
+
+// ===
+
 const sequenceSum = (begin, end, step) => {
   if (begin > end) return 0
-  if (begin === step && end === step) return step
-
-  if (begin !== step) {
-    let t = true
-    const c = begin
-    let r = 0
-    for (let i = 1; t; i++) {
-      if (r > end) {
-        t = false
-      } else {
-        r = (r + c) * i
-        r
-      }
-    }
-    r
-  }
-
-  if (begin === step) {
-    const a = end / begin
-    let b = 0
-    for (let i = 1; i <= a; i++) {
-      b += step * i
-    }
-    return b
-  }
+  return begin + sequenceSum(begin + step, end, step)
 }
 
 console.log(sequenceSum(2, 2, 2)) // 2
