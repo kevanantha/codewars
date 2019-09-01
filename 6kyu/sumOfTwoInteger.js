@@ -5,5 +5,3 @@ const sum = (a, b) => {
     return sum(a ^ b, (a & b) << 1)
   }
 }
-
-console.log(sum(-27, 18))
