@@ -1,9 +1,5 @@
 function matrix(n) {
   let result = new Array(n).fill().map(() => new Array(n).fill(''))
-  // let result = [];
-  // for (let i = 0; i < n; i++) {
-  //     result.push([])
-  // }
   let counter = 1
   let startCol = 0
   let endCol = n - 1
